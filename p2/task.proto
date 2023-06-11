@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+message TaskRequest {
+  repeated int32 integers = 1;
+}
+message TaskResponse {
+  int32 result = 1;
+}
+service TaskDistributor {
+  rpc DistributeTask (TaskRequest) returns (TaskResponse) {}
+}
